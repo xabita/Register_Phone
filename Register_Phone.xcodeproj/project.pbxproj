@@ -14,6 +14,9 @@
 		266639381C0AD75300543A48 /* Register_Phone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 266639361C0AD75300543A48 /* Register_Phone.xcdatamodeld */; };
 		2666393A1C0AD75300543A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266639391C0AD75300543A48 /* Assets.xcassets */; };
 		2666393D1C0AD75300543A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666393B1C0AD75300543A48 /* LaunchScreen.storyboard */; };
+		2666394B1C0ADA4D00543A48 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 266639471C0ADA4D00543A48 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
+		2666394C1C0ADA4D00543A48 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 266639481C0ADA4D00543A48 /* DigitsKit.framework */; settings = {ASSET_TAGS = (); }; };
+		2666394D1C0ADA4D00543A48 /* DigitsKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 266639491C0ADA4D00543A48 /* DigitsKitResources.bundle */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,10 @@
 		266639391C0AD75300543A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2666393C1C0AD75300543A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2666393E1C0AD75300543A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		266639471C0ADA4D00543A48 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		266639481C0ADA4D00543A48 /* DigitsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigitsKit.framework; sourceTree = "<group>"; };
+		266639491C0ADA4D00543A48 /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = "<group>"; };
+		2666394A1C0ADA4D00543A48 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2666394B1C0ADA4D00543A48 /* Fabric.framework in Frameworks */,
+				2666394C1C0ADA4D00543A48 /* DigitsKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,10 @@
 		2666391E1C0AD75300543A48 = {
 			isa = PBXGroup;
 			children = (
+				266639471C0ADA4D00543A48 /* Fabric.framework */,
+				266639481C0ADA4D00543A48 /* DigitsKit.framework */,
+				266639491C0ADA4D00543A48 /* DigitsKitResources.bundle */,
+				2666394A1C0ADA4D00543A48 /* TwitterCore.framework */,
 				266639291C0AD75300543A48 /* Register_Phone */,
 				266639281C0AD75300543A48 /* Products */,
 			);
@@ -108,6 +121,7 @@
 				266639231C0AD75300543A48 /* Sources */,
 				266639241C0AD75300543A48 /* Frameworks */,
 				266639251C0AD75300543A48 /* Resources */,
+				266639461C0AD9E100543A48 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -155,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2666394D1C0ADA4D00543A48 /* DigitsKitResources.bundle in Resources */,
 				2666393D1C0AD75300543A48 /* LaunchScreen.storyboard in Resources */,
 				2666393A1C0AD75300543A48 /* Assets.xcassets in Resources */,
 				266639351C0AD75300543A48 /* Main.storyboard in Resources */,
@@ -162,6 +177,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		266639461C0AD9E100543A48 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 07be02e2540959c9f9f6e6ff0c481e672b233907 52eacaa9a9f6f422b1745f08fd4af9aec66fa3bfb247aace5544032d59c3ef89";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		266639231C0AD75300543A48 /* Sources */ = {
@@ -281,6 +312,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Register_Phone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "margom.Register-Phone";
@@ -292,6 +327,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Register_Phone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "margom.Register-Phone";
